@@ -102,7 +102,7 @@ contactForm.addEventListener('submit', (e) => {
     };
     
     // Create mailto link
-    const mailtoLink = `mailto:adwaith@example.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`;
+    const mailtoLink = `mailto:adwaiths710@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`;
     
     // Show success message
     showNotification('Message prepared! Opening your email client...', 'success');
@@ -197,9 +197,11 @@ document.head.appendChild(style);
 const downloadResumeBtn = document.getElementById('download-resume');
 downloadResumeBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    showNotification('Resume download feature coming soon!', 'info');
-    // In production, you would link to actual resume file:
-    // window.open('path/to/resume.pdf', '_blank');
+    const link = document.createElement('a');
+    link.href = 'IBM Resume.pdf';
+    link.download = 'Adwaith_S_Resume.pdf';
+    link.click();
+    showNotification('Resume downloaded successfully!', 'success');
 });
 
 // Parallax effect for hero section
