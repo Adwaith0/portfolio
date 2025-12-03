@@ -198,7 +198,7 @@ const downloadResumeBtn = document.getElementById('download-resume');
 downloadResumeBtn.addEventListener('click', (e) => {
     e.preventDefault();
     const link = document.createElement('a');
-    link.href = 'IBM Resume.pdf';
+    link.href = 'Resume.pdf';
     link.download = 'Adwaith_S_Resume.pdf';
     link.click();
     showNotification('Resume downloaded successfully!', 'success');
