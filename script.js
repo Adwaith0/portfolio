@@ -283,15 +283,6 @@ projectLinks.forEach(link => {
     });
 });
 
-// UX Project prototype link
-const prototypeBtn = document.querySelector('.prototype-section .btn');
-if (prototypeBtn) {
-    prototypeBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        showNotification('Interactive prototype coming soon!', 'info');
-    });
-}
-
 // Social links placeholder handling
 const socialLinks = document.querySelectorAll('.social-icon');
 socialLinks.forEach(link => {

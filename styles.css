@@ -1370,6 +1370,10 @@ body {
 
 /* Responsive Design */
 @media (max-width: 968px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
     .nav-menu {
         position: fixed;
         top: 70px;
@@ -1396,6 +1400,11 @@ body {
 
     .hero-subtitle {
         font-size: 1.5rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        padding: 0 1rem;
     }
 
     .about-content {
@@ -1427,38 +1436,180 @@ body {
     .flow-arrow {
         transform: rotate(90deg);
     }
+
+    .phone-mockup {
+        width: 250px;
+        height: 500px;
+    }
+
+    .features-grid,
+    .insights-grid,
+    .pain-points {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-icons {
+        justify-content: center;
+    }
+
+    .case-study-section {
+        padding: 1.5rem;
+    }
 }
 
 @media (max-width: 640px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .section-padding {
+        padding: 4rem 0;
+    }
+
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .hero-subtitle {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
     }
 
     .hero-cta {
         flex-direction: column;
         width: 100%;
+        gap: 1rem;
     }
 
     .btn {
         width: 100%;
         justify-content: center;
+        padding: 0.9rem 1.5rem;
+        font-size: 0.95rem;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .section-title::after {
+        width: 80px;
     }
 
     .project-card {
         padding: 1.5rem;
     }
 
+    .project-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .project-title {
+        font-size: 2rem;
+    }
+
     .achievement-card {
         flex-direction: column;
         text-align: center;
+        padding: 2rem 1.5rem;
+    }
+
+    .achievement-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+    }
+
+    .phone-mockup {
+        width: 200px;
+        height: 400px;
+        padding: 10px;
+        border-radius: 30px;
+    }
+
+    .mockup-screen {
+        border-radius: 20px;
+    }
+
+    .app-preview i {
+        font-size: 3rem;
+    }
+
+    .skill-category {
+        padding: 1.5rem;
+    }
+
+    .contact-form-wrapper {
+        padding: 1.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.95rem;
+    }
+
+    .nav-brand {
+        font-size: 1.3rem;
+    }
+
+    .navbar .container {
+        padding: 0.8rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .project-icon,
+    .achievement-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+
+    .tech-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .social-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+
+    .phone-mockup {
+        width: 180px;
+        height: 360px;
+    }
+
+    .case-study-section {
+        padding: 1.2rem;
+    }
+
+    .project-card {
+        padding: 1.2rem;
     }
 }
 
