@@ -197,11 +197,29 @@ document.head.appendChild(style);
 const downloadResumeBtn = document.getElementById('download-resume');
 downloadResumeBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    const link = document.createElement('a');
-    link.href = 'Resume.pdf';
-    link.download = 'Adwaith_S_Resume.pdf';
-    link.click();
-    showNotification('Resume downloaded successfully!', 'success');
+    
+    // Try to download the resume
+    fetch('Resume.pdf')
+        .then(response => {
+            if (!response.ok) throw new Error('Resume not found');
+            return response.blob();
+        })
+        .then(blob => {
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'Adwaith_S_Resume.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            window.URL.revokeObjectURL(url);
+            showNotification('Resume downloaded successfully!', 'success');
+        })
+        .catch(error => {
+            // Fallback: open in new tab if download fails
+            window.open('Resume.pdf', '_blank');
+            showNotification('Opening resume in new tab...', 'info');
+        });
 });
 
 // Parallax effect for hero section
